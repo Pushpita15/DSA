@@ -32,7 +32,7 @@ void append(Node** head, int value)
     current->next = temp;
     //printf("appended");
 }
-void traverse(Node* head)
+void traverse(Node*head)
 {
    
     while(head!=NULL)
@@ -42,6 +42,43 @@ void traverse(Node* head)
     }
     printf("\n");
 }
+void reverse(Node * head)
+{
+    if(head->next!=NULL)
+    {
+        reverse(head->next);
+       //wrong** printf("%d ",head->data);
+    }
+    printf("%d ",head->data);
+    
+}
+void reversen(Node**head)
+{
+    Node *current=*head;
+    Node *prev=NULL,*nextn=NULL;
+    if((*head)->next==NULL)
+    {
+        
+        traverse(*head);
+    }
+    else
+    {
+    
+        while(current!=NULL)
+        {
+            nextn=current->next;
+            current->next=prev;
+            prev=current;
+            current=nextn;
+            
+        }
+        *head=prev;
+        traverse(*head);
+        
+    }
+        
+}
+
 void delete(Node **head,int n)
 {
     Node* current=*head;
@@ -88,24 +125,26 @@ void addbefore(Node** current,int value,int n)
     }
    
 }
+
+
 void addafter(Node**current,int value,int n)
 {
-    
+    int i;
     
     while(n--)
     {
         if(n==0)
         {
             Node *new=create_node(value);
-            
-            
-
-            new->next=(*current);
-
+            Node * nextn=(*current)->next;
             
 
+            (*current)->next=new;
+
             
-            *current=new;
+
+            
+            new->next=nextn;
             
 
 
