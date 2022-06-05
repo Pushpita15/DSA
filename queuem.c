@@ -15,7 +15,7 @@ int main()
     printf("%d ",dequeue(&q));
     //dequeue(&q);
     
-    //display(&q);
+   
     return 0;
 
     
