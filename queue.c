@@ -87,14 +87,3 @@ ITEM dequeue(queue*q)
     
     return temp;
 }
-
-void display(queue * q)
-{
-    int i;
-
-    for(i=q->f;i<S;i++)
-    {
-        printf("%d ",q->arr[i]);
-    }
-    printf("\n%d %d ",q->r,q->f);
-}
