@@ -10,4 +10,4 @@ ITEM isempty(queue * q);
 ITEM isfull(queue*q);
 void enqueue(queue*q,ITEM value);
 ITEM dequeue(queue*q);
-void display(queue * q);
+
