@@ -19,15 +19,19 @@ Tnode* get_node(item value)
 void insert (Tnode**ptroot,item value)
 {
     Tnode * tmp=get_node(value);
+    Tnode * root;
     if(*ptroot==NULL)
     {
         *ptroot=tmp;
         return;
+        
     }
-    else if( (*ptroot)->left==NULL )
+    else if( (*ptroot)->left==NULL && (*ptroot)->right!=NULL )
         insert(&(*ptroot)->left,value);
-    else
+    else if( (*ptroot)->right==NULL && (*ptroot)->left!=NULL )
         insert(&(*ptroot)->right,value);
+    else
+        insert(&(*ptroot)->left,value);
     
 
 }
@@ -92,11 +96,13 @@ int main()
     insert(&root,4);
     insert(&root,6);
     insert(&root,8);
-    /*preorder(root);
+    insert(&root,10);
+    preorder(root);
     printf("\n");
     inorder(root);
     printf("\n");
-    postorder(root);*/
+    postorder(root);
+    printf("\n");
     zigzag(root);
     return 0;
 
