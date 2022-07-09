@@ -201,34 +201,34 @@ int main()
 
     printf("\n---------------------------------------------\n");
 
-    //B.
+    //C.
 
 
     init(&queue,size);
-    enq(&queue,52);
     enq(&queue,41);
+    enq(&queue,63);
     enq(&queue,96);
-    enq(&queue,36);
     enq(&queue,78);
-    enq(&queue,96);
-    enq(&queue,14);
+    enq(&queue,95);
+    enq(&queue,12);
+    enq(&queue,0);
+    enq(&queue,63);
+    enq(&queue,12);
 
 
+    printf("%d is deleted\n",deq(&queue));
     printf("%d is deleted\n",deq(&queue));
     printf("%d is deleted\n",deq(&queue));
     printf("\n\n");
     
 
-    enq(&queue,52);
-    enq(&queue,36);
-    enq(&queue,74);
-    enq(&queue,15);
+    enq(&queue,12);
+    enq(&queue,53);
     enq(&queue,96);
     
     printf("%d is deleted\n",deq(&queue));
     printf("%d is deleted\n",deq(&queue));
-    printf("%d is deleted\n",deq(&queue));
-    printf("%d is deleted\n",deq(&queue));
+    
 
 
 
