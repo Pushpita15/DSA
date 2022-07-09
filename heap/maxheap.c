@@ -90,11 +90,19 @@ item deq(PQ*ptr)
 }
 int main()
 {
-    PQ queue;
+    PQ  queue;
     int size;
     printf("enter the size of the queue:");
     scanf("%d",&size);
     init(&queue,size);
+
+    /*PQ * arr_ptr[size];
+
+    int i,j;
+    for(i=0;i<size;i++)
+    {
+        arr_ptr[i]=&queue[i];
+    }*/
 
 
     //A.
@@ -112,11 +120,11 @@ int main()
     
     printf("%d is deleted\n",deq(&queue));
     printf("%d is deleted\n",deq(&queue));
-
     printf("\n\n");
 
     //2.
     
+    init(&queue,size);
     enq(&queue,96);
     enq(&queue,45);
     enq(&queue,78);
@@ -134,6 +142,8 @@ int main()
 
     //3.
 
+
+    init(&queue,size);
     enq(&queue,86);
     enq(&queue,92);
     enq(&queue,12);
@@ -152,6 +162,7 @@ int main()
 
     //4.
 
+    init(&queue,size);
     enq(&queue,63);
     enq(&queue,45);
     enq(&queue,17);
@@ -169,6 +180,8 @@ int main()
 
     //5.
 
+
+    init(&queue,size);
     enq(&queue,63);
     enq(&queue,52);
     enq(&queue,14);
@@ -186,10 +199,12 @@ int main()
 
     printf("\n\n");
 
-    printf("---------------------------------------------");
+    printf("\n---------------------------------------------\n");
 
     //B.
 
+
+    init(&queue,size);
     enq(&queue,52);
     enq(&queue,41);
     enq(&queue,96);
